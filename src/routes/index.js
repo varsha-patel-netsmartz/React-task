@@ -6,6 +6,7 @@ import Home from '../components/Home';
 import Counter from '../components/Counter';
 import ParentComponent from '../components/ParentComponent';
 import DataFetcher from '../components/DataFetcher';
+import LoginForm from '../components/LoginForm';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/data-fetcher",
     element: (<Guard><DataFetcher/></Guard>),
+  },
+  {
+    path: "/login-form",
+    element: (<Guard><LoginForm/></Guard>),
   },
 ])
 

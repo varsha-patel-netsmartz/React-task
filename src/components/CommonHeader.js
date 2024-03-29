@@ -9,6 +9,7 @@ function CommonHeader() {
         <Link to="/counter" className="header-link">Counter</Link>
         <Link to="/parent" className="header-link">Parent</Link>
         <Link to="/data-fetcher" className="header-link">Data Fetcher</Link>
+        <Link to="/login-form" className="header-link">Login Form</Link>
     </>
     );
 }
