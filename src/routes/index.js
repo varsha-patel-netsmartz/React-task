@@ -7,6 +7,10 @@ import Counter from '../components/Counter';
 import ParentComponent from '../components/ParentComponent';
 import DataFetcher from '../components/DataFetcher';
 import LoginForm from '../components/LoginForm';
+import CardContainer from '../components/CardContainer';
+import TodoForm from '../components/TodoForm';
+import TodoList from '../components/TodoList';
+import TodoItem from '../components/TodoItem';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +31,22 @@ const router = createBrowserRouter([
   {
     path: "/login-form",
     element: (<Guard><LoginForm/></Guard>),
+  },
+  {
+    path: "/card-container",
+    element: (<Guard><CardContainer/></Guard>),
+  },
+  {
+    path: "/todo-form",
+    element: (<Guard><TodoForm/></Guard>),
+  },
+  {
+    path: "/todo-list",
+    element: (<Guard><TodoList/></Guard>),
+  },
+  {
+    path: "/edit-todo/:id",
+    element: (<Guard><TodoItem/></Guard>),
   },
 ])
 

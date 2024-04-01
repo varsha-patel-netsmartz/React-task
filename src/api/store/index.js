@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import DataFetcherSlice from '../slices/dataFetcher';
 import CounterSlice from '../slices/counterSlice';
+import TodoSlice from '../slices/todoSlice';
 
 const reducer = {
   login: DataFetcherSlice,
-  counter: CounterSlice
+  counter: CounterSlice,
+  todo: TodoSlice
 }
 
 const store = configureStore({
