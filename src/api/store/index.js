@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import DataFetcherSlice from '../slices/dataFetcher';
+import CounterSlice from '../slices/counterSlice';
 
 const reducer = {
-  login: DataFetcherSlice
+  login: DataFetcherSlice,
+  counter: CounterSlice
 }
 
 const store = configureStore({

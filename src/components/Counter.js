@@ -1,18 +1,22 @@
 // Counter.js
-import React, { useState } from 'react';
+import React from 'react';
 import CommonHeader from './CommonHeader.js'
+import { useDispatch, useSelector } from 'react-redux'
+import { increment, decrement } from '../api/slices/counterSlice.js';
 
-function Counter() {
-  const [counter, setCounter] = useState(0);
+function CounterComponent() {
+  const counter = useSelector(state => state.counter.value);
+
+  const dispatch = useDispatch()
 
   const updateCounter = () => {
-    setCounter(counter+1)
+    dispatch(increment())
   }
-  const increment = () => {
-    setCounter(counter+1)
+  const incrementCounter = () => {
+    dispatch(increment())
   }
-  const decrement = () => {
-    setCounter(counter-1)
+  const decrementCounter = () => {
+    dispatch(decrement())
   }
   return (
     <>
@@ -20,11 +24,11 @@ function Counter() {
         <CommonHeader />
         <h2>Counter = {counter}</h2>
         <button onClick={updateCounter}>Click</button> <br/>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
+        <button onClick={incrementCounter}>Increment</button>
+        <button onClick={decrementCounter}>Decrement</button>
       </div>
     </>
   );
 }
 
-export default Counter;
+export default CounterComponent;

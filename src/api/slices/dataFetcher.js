@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import ApiService from "../services"
 
-const initialState = []
+const initialState = {}
 
 export const dataFetcher = createAsyncThunk(
   "dataFetcher",
